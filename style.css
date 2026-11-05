@@ -1,0 +1,288 @@
+/* RESET BÁSICO E ESTILOS GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------------
+   PARTE 1 - CABEÇALHO E MENU DE NAVEGAÇÃO
+   ---------------------------------------------------- */
+header {
+    background-color: #1b4332;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+}
+
+/* Flexbox no menu de navegação */
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #2d6a4f;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito :hover nos links */
+.menu a:hover {
+    background-color: #52b788;
+    color: #1b4332;
+}
+
+/* ----------------------------------------------------
+   PARTE 2 - APRESENTAÇÃO
+   ---------------------------------------------------- */
+.apresentacao {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.texto-apresentacao {
+    flex: 1;
+}
+
+.texto-apresentacao h2 {
+    color: #1b4332;
+    margin-bottom: 15px;
+}
+
+.img-apresentacao {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ----------------------------------------------------
+   PARTE 3 - CARDS DE DESTAQUE
+   ---------------------------------------------------- */
+#destaques {
+    margin: 40px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+#destaques h2 {
+    text-align: center;
+    color: #1b4332;
+    margin-bottom: 25px;
+}
+
+/* Contêiner de Cards em Flexbox */
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilização individual dos cards */
+.card {
+    width: 250px;
+    padding: 15px;
+    border: 2px solid #2d6a4f;
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+.card h3 {
+    color: #1b4332;
+    font-size: 1.1rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.btn-saiba-mais {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #2d6a4f;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #1b4332;
+}
+
+/* Requisito de Posicionamento Relative/Absolute no Primeiro Card */
+.card-destaque-principal {
+    position: relative; /* Referência para a etiqueta absolute */
+}
+
+.etiqueta-destaque {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #d90429;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ----------------------------------------------------
+   PARTE 4 - PROGRAMAÇÃO
+   ---------------------------------------------------- */
+#programacao {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+#programacao h2 {
+    text-align: center;
+    color: #1b4332;
+    margin-bottom: 25px;
+}
+
+/* Faixa de blocos informativos em Flexbox */
+.informacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.bloco-info {
+    flex: 1;
+    background-color: #e8f5e9;
+    border: 1px solid #a3b18a;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.bloco-info h4 {
+    color: #1b4332;
+    margin-bottom: 5px;
+}
+
+/* Estilização da Tabela de Programação */
+.tabela-programacao {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.tabela-programacao th,
+.tabela-programacao td {
+    border: 1px solid #dddddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.tabela-programacao th {
+    background-color: #2d6a4f;
+    color: #ffffff;
+}
+
+.tabela-programacao tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* ----------------------------------------------------
+   PARTE 5 - CONTATO E RODAPÉ
+   ---------------------------------------------------- */
+#contato {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#contato h2 {
+    color: #1b4332;
+    margin-bottom: 10px;
+}
+
+/* Rodapé em Flexbox Column */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #081c15;
+    color: #d8f3dc;
+    padding: 25px;
+    gap: 8px;
+    margin-top: 50px;
+}
+
+/* ----------------------------------------------------
+   REQUISITO ADICIONAL - POSITION FIXED
+   ---------------------------------------------------- */
+.voltar-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1b4332;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+}
+
+.voltar-topo:hover {
+    background-color: #52b788;
+    color: #1b4332;
+}
